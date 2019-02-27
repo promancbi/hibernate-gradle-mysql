@@ -1,0 +1,7 @@
+import hibernate.example.Aerolinea
+
+model {
+	Aerolinea aerolinea
+}
+
+json g.render(aerolinea, [resolveTemplate: false])

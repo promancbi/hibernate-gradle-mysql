@@ -1,0 +1,8 @@
+import hibernate.example.Aerolinea
+
+model {
+	Iterable<Aerolinea> aerolineaList
+}
+
+json tmpl.aerolinea(aerolineaList ?: [])
+

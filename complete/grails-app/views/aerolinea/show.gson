@@ -1,0 +1,7 @@
+import hibernate.example.Aerolinea
+
+model {
+	Aerolinea aerolinea
+}
+
+json tmpl.aerolinea(aerolinea)
