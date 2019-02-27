@@ -8,7 +8,7 @@ class AerolineaSpec extends Specification implements DomainUnitTest<Aerolinea> {
     void 'test'() {
         //tag::testInvalid[]
         when: 'A domain class is saved with invalid data'
-        Aerolinea aerolinea = new Aerolinea(claveIATA: 8, name: 'LIBERTAD', estatus: 0)
+        Aerolinea aerolinea = new Aerolinea(idAerolinea: 11, claveIATA: 8, name: 'LIBERTAD', estatus: 0)
         aerolinea.save()
 
         then: 'There were errors and the data was not saved'

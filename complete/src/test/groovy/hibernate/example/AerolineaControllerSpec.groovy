@@ -6,7 +6,7 @@ import grails.testing.web.controllers.ControllerUnitTest
 
 //tag::spec[]
 @SuppressWarnings('MethodName')
-class AerolineaControllerSpec extends HibernateSpec implements ControllerUnitTest<ProductController> {
+class AerolineaControllerSpec extends HibernateSpec implements ControllerUnitTest<AerolineaController> {
 //end::spec[]
 
     //tag::config[]
@@ -30,7 +30,7 @@ class AerolineaControllerSpec extends HibernateSpec implements ControllerUnitTes
     void 'test the search action finds results'() {
         when: 'A query is executed that finds results'
 
-        controller.search(nombre:'OAX', max:10)
+        controller.search('OAX', 10)
         then: 'The response is correct'
         response.json.size() == 1
         response.json[0].nombre == 'OAXACA'
